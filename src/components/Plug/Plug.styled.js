@@ -4,7 +4,7 @@ import { globalColor } from "../../styles/root";
 export const Container = styled.div`
   width: 1440px;
   padding: 0 64px;
-  margin: 0 64px;
+  /* margin: 0 64px; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);

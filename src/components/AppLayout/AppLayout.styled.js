@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { globalColor } from "../../styles/root";
 
 export const LayoutList = styled.ul`
-  margin: 0 64px;
+  /* margin: 0 64px; */
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   display: flex;

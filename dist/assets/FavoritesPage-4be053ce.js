@@ -1,4 +1,4 @@
-import{u as o,g as m,a as t,j as s,L as p}from"./index-74a5db7c.js";import{s as d,a as f,C as x}from"./CampersList-9b0982fc.js";import{s as g}from"./selectors-d9aac75d.js";import{P as u}from"./Plug-cb41c6a1.js";import"./sprite-923fa693.js";const j=o.div`
+import{u as o,g as m,a as t,j as s,L as p}from"./index-dcc4e537.js";import{s as d,a as f,C as x}from"./CampersList-220e90b7.js";import{s as g}from"./selectors-d9aac75d.js";import{P as u}from"./Plug-0d9cf852.js";import"./sprite-923fa693.js";const j=o.div`
   /* width: 1440px; */
   /* margin: 0 32px; */
   display: flex;

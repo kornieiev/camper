@@ -1,7 +1,7 @@
-import{u as s,g as a,a as I,r as p,j as e,R as b,b as j}from"./index-74a5db7c.js";import{a as v}from"./selectors-d9aac75d.js";const w=s.div`
+import{u as s,g as a,a as I,r as p,j as e,R as b,b as j}from"./index-dcc4e537.js";import{a as v}from"./selectors-d9aac75d.js";const w=s.div`
   width: 1440px;
   padding: 0 64px;
-  margin: 0 64px;
+  /* margin: 0 64px; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);

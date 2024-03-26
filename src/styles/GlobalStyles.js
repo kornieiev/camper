@@ -18,6 +18,8 @@ export const GlobalStyles = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     font-family: "Inter", sans-serif;
     color: #101828;
+    background-color: violet;
+
     font-size: 16px;
     line-height: 1.50;
     width: 100%;
