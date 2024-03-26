@@ -11,19 +11,22 @@ export const Container = styled.div`
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   height: calc(100vh - 120px);
-  gap: 30px;
+  gap: 15px;
   background-color: ${globalColor.colorWhiteGrey};
 `;
 
 export const GridItem = styled.div`
+  border-radius: 30px;
   width: 100%;
   height: 100%;
   background-size: cover;
   background-position: center;
+  transition: ease-in 1500ms;
 `;
 
 export const GridItemAccent = styled.div`
   display: flex;
+  width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -31,10 +34,15 @@ export const GridItemAccent = styled.div`
   color: ${globalColor.colorWhite};
   margin-left: auto;
   margin-right: auto;
+  border-radius: 30px;
+  :hover {
+    color: ${globalColor.colorWhite};
+  }
 `;
 
 export const GridItemProps = styled.div`
   display: flex;
+  justify-content: center;
   font-size: 24px;
   font-weight: 700;
   width: 100%;

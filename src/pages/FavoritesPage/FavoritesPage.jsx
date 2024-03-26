@@ -18,12 +18,13 @@ const Favorites = () => {
   );
 
   const title = "Add camper to favorite!";
+  const link = "/catalog";
 
   return (
     <Container>
       {favoriteCampers.length < 1 && (
         <>
-          <Plug title={title} />
+          <Plug title={title} link={link} />
         </>
       )}
       {isLoading ? (

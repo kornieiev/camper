@@ -2,11 +2,12 @@ import styled from "styled-components";
 import { globalColor } from "../../styles/root";
 
 export const LocationBoxDiv = styled.div`
+  position: relative;
+
   width: 360px;
 `;
 
 export const LocationLabel = styled.label`
-  position: relative;
   font-weight: 500;
   color: ${globalColor.colorGrey};
   font-family: "Inter", "sens-serif";
@@ -14,7 +15,6 @@ export const LocationLabel = styled.label`
 
 export const LocationInput = styled.input`
   font-family: "Inter", "sens-serif";
-  position: relative;
   border-radius: 10px;
   width: 320px;
   height: 56px;
@@ -27,10 +27,10 @@ export const LocationInput = styled.input`
   margin-top: 8px;
   border: none;
   &:hover {
-    outline: none;
+    outline: 1px solid ${globalColor.colorRed};
   }
   &:focus {
-    outline: none;
+    outline: 1px solid ${globalColor.colorRed};
   }
 `;
 
@@ -38,9 +38,7 @@ export const LocationSVG = styled.svg`
   position: absolute;
   width: 18px;
   height: 20px;
-  top: 230px;
-  left: 140px;
-  transform: translateY(-50%);
+  transform: translateY(-200%) translateX(75%);
   fill: transparent;
   stroke: ${globalColor.colorBlack};
   background-color: ${globalColor.colorWhiteGrey};

@@ -23,14 +23,22 @@ export const LayoutItem = styled.li`
 `;
 
 export const Logo = styled.img`
-  width: 150px;
+  width: 130px;
+  height: 80px;
+  margin: 20px 0;
 `;
 
 export const NaviLink = styled(NavLink)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  border-radius: 30px;
   margin-left: 50px;
   margin-right: 8px;
   font-weight: 500;
   font-size: 26px;
   line-height: 1.5;
-  color: ${globalColor.colorGrey};
+  margin: 20px;
 `;

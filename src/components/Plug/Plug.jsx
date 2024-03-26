@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Container,
   GridItem,
@@ -7,76 +7,64 @@ import {
 } from "./Plug.styled";
 import { useSelector } from "react-redux";
 import { selectCampers } from "../../redux/catalog/selectors";
+import { Link } from "react-router-dom";
 
-export default function Plug({ title }) {
+export default function Plug({ title, link }) {
+  console.log("title", title);
+  console.log("link", link);
+
   const camper = useSelector(selectCampers);
+  const [randomIndexes, setRandomIndexes] = useState([]);
 
+  useEffect(() => {
+    const intervals = [];
+    const newRandomIndexes = Array.from(
+      { length: camper.length },
+      (_, index) => {
+        const randomIndex = Math.floor(Math.random() * camper.length);
+        intervals.push(
+          setInterval(() => {
+            const updatedIndex = Math.floor(Math.random() * camper.length);
+            setRandomIndexes((prevIndexes) => {
+              const newIndexes = [...prevIndexes];
+              newIndexes[index] = updatedIndex;
+              return newIndexes;
+            });
+          }, randomTime())
+        );
+        return randomIndex;
+      }
+    );
+    setRandomIndexes(newRandomIndexes);
+
+    return () => {
+      intervals.forEach((intervalId) => clearInterval(intervalId));
+    };
+  }, []);
+
+  const randomTime = () => {
+    return Math.round(Math.random() * (8000 - 3000) + 3000);
+  };
   return (
     <Container>
-      <GridItem
-        style={{
-          borderBottomRightRadius: "60px",
-          borderTopLeftRadius: "60px",
-          backgroundImage: `url(${camper[0]?.gallery[0]})`,
-        }}
-      ></GridItem>
-      <GridItem
-        style={{
-          borderBottomLeftRadius: "60px",
-          borderBottomRightRadius: "60px",
-          backgroundImage: `url(${camper[1]?.gallery[0]})`,
-        }}
-      ></GridItem>
-      <GridItem
-        style={{
-          borderBottomLeftRadius: "60px",
-          borderTopRightRadius: "60px",
-          backgroundImage: `url(${camper[2]?.gallery[0]})`,
-        }}
-      ></GridItem>
-      <GridItem
-        style={{
-          borderTopRightRadius: "60px",
-          borderBottomRightRadius: "60px",
-          backgroundImage: `url(${camper[3]?.gallery[0]})`,
-        }}
-      ></GridItem>
-      <GridItemAccent
-        style={{
-          borderRadius: "60px",
-        }}
-      >
-        <GridItemProps>{title}</GridItemProps>
-      </GridItemAccent>
-      <GridItem
-        style={{
-          borderTopLeftRadius: "60px",
-          borderBottomLeftRadius: "60px",
-          backgroundImage: `url(${camper[6]?.gallery[0]})`,
-        }}
-      ></GridItem>
-      <GridItem
-        style={{
-          borderBottomLeftRadius: "60px",
-          borderTopRightRadius: "60px",
-          backgroundImage: `url(${camper[7]?.gallery[0]})`,
-        }}
-      ></GridItem>
-      <GridItem
-        style={{
-          borderTopLeftRadius: "60px",
-          borderTopRightRadius: "60px",
-          backgroundImage: `url(${camper[8]?.gallery[0]})`,
-        }}
-      ></GridItem>
-      <GridItem
-        style={{
-          borderTopLeftRadius: "60px",
-          borderBottomRightRadius: "60px",
-
-          backgroundImage: `url(${camper[9]?.gallery[0]})`,
-        }}
-      ></GridItem>
+      {randomIndexes.map((index, i) => (
+        <React.Fragment key={i}>
+          <GridItem
+            style={{
+              borderBottomRightRadius: "30px",
+              borderTopLeftRadius: "30px",
+              backgroundImage: `url(${camper[index]?.gallery[0]})`,
+            }}
+          />
+          {i === 3 && (
+            <GridItemAccent>
+              <GridItemProps>
+                <Link to={link}>{title}</Link>
+              </GridItemProps>
+            </GridItemAccent>
+          )}
+        </React.Fragment>
+      ))}
     </Container>
   );
 }

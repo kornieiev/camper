@@ -1,9 +1,15 @@
 import styled, { createGlobalStyle } from "styled-components";
 import "modern-normalize";
+import { globalColor } from "../styles/root";
 
 export const GlobalStyles = createGlobalStyle`
   * {
     box-sizing: border-box;
+  }
+
+  .active {
+    color: ${globalColor.colorRed};
+    border: 3px solid rgb(228, 72, 72, 0.1);
   }
 
   body {

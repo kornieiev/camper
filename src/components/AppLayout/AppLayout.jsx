@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import { Container } from "../../styles/GlobalStyles";
 import { GlobalStyles } from "../../styles/GlobalStyles";
 import logo from "../../assets/logo-min.png";
@@ -21,9 +21,9 @@ export default function AppLayout() {
           <nav>
             <LayoutList>
               <LayoutLogoItem>
-                <NaviLink to='/'>
-                  <Logo width='100px' src={logo} alt='CamperVanRent' />
-                </NaviLink>
+                <Link to='/'>
+                  <Logo src={logo} alt='CamperVanRent' />
+                </Link>
               </LayoutLogoItem>
               <LayoutItem>
                 <NaviLink to='/catalog'>Catalog</NaviLink>

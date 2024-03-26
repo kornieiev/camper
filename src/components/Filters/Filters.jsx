@@ -40,7 +40,7 @@ export default function Filters() {
             <Label>
               <Input type='checkbox' name='equipment' value='airConditioner' />
               <Span>
-                <SvgIcon style={{ fill: "#101828", stroke: "transparent" }}>
+                <SvgIcon>
                   <use href={sprite + "#icon-ac"} />
                 </SvgIcon>
                 AC
