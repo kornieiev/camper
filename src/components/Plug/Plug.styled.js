@@ -1,0 +1,42 @@
+import styled, { createGlobalStyle } from "styled-components";
+import { globalColor } from "../../styles/root";
+
+export const Container = styled.div`
+  width: 1440px;
+  padding: 0 64px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: calc(100vh - 120px);
+  gap: 30px;
+  background-color: ${globalColor.colorWhiteGrey};
+`;
+
+export const GridItem = styled.div`
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+`;
+
+export const GridItemAccent = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: ${globalColor.colorRed};
+  color: ${globalColor.colorWhite};
+  margin-left: auto;
+  margin-right: auto;
+`;
+
+export const GridItemProps = styled.div`
+  display: flex;
+  font-size: 24px;
+  font-weight: 700;
+  width: 100%;
+  padding: 0 20px;
+`;
