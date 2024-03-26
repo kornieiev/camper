@@ -1,1 +1,0 @@
-import{j as o}from"./index-c34bee65.js";import{P as t}from"./Plug-7a2cd9ee.js";import"./selectors-d9aac75d.js";function a(){const r="Embark on Your Journey Today!";return o.jsx(o.Fragment,{children:o.jsx(t,{title:r})})}export{a as default};
