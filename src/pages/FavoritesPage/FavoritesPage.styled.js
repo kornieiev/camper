@@ -2,9 +2,8 @@ import styled from "styled-components";
 import { globalColor } from "../../styles/root";
 
 export const Container = styled.div`
-  width: 1440px;
-  padding: 0 64px;
-  margin: 0 auto;
+  /* width: 1440px; */
+  /* margin: 0 32px; */
   display: flex;
   justify-content: center;
   align-items: center;

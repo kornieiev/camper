@@ -58,9 +58,9 @@ export default function Plug({ title, link }) {
           />
           {i === 3 && (
             <GridItemAccent>
-              <GridItemProps>
-                <Link to={link}>{title}</Link>
-              </GridItemProps>
+              <Link to={link}>
+                <GridItemProps>{title}</GridItemProps>
+              </Link>
             </GridItemAccent>
           )}
         </React.Fragment>

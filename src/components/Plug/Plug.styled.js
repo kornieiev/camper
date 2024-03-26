@@ -4,7 +4,7 @@ import { globalColor } from "../../styles/root";
 export const Container = styled.div`
   width: 1440px;
   padding: 0 64px;
-  margin: 0 auto;
+  margin: 0 64px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -37,6 +37,7 @@ export const GridItemAccent = styled.div`
   border-radius: 30px;
   :hover {
     color: ${globalColor.colorWhite};
+    transition: ease-in 300ms;
   }
 `;
 
@@ -46,5 +47,5 @@ export const GridItemProps = styled.div`
   font-size: 24px;
   font-weight: 700;
   width: 100%;
-  padding: 0 20px;
+  padding: 100px 20px;
 `;
