@@ -21,9 +21,9 @@ export default function AppLayout() {
           <nav>
             <LayoutList>
               <LayoutLogoItem>
-                <a href='/'>
+                <NaviLink to='/'>
                   <Logo width='100px' src={logo} alt='CamperVanRent' />
-                </a>
+                </NaviLink>
               </LayoutLogoItem>
               <LayoutItem>
                 <NaviLink to='/catalog'>Catalog</NaviLink>
