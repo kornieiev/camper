@@ -21,15 +21,15 @@ export default function AppLayout() {
           <nav>
             <LayoutList>
               <LayoutLogoItem>
-                <Link to='/'>
+                <Link to='./'>
                   <Logo src={logo} alt='CamperVanRent' />
                 </Link>
               </LayoutLogoItem>
               <LayoutItem>
-                <NaviLink to='/catalog'>Catalog</NaviLink>
+                <NaviLink to='./catalog'>Catalog</NaviLink>
               </LayoutItem>
               <li>
-                <NaviLink to='/favorites'>Favorites</NaviLink>
+                <NaviLink to='./favorites'>Favorites</NaviLink>
               </li>
             </LayoutList>
           </nav>
