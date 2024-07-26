@@ -43,9 +43,12 @@ export const GridItemAccent = styled.div`
 
 export const GridItemProps = styled.div`
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
+  text-align: center;
   font-size: 24px;
   font-weight: 700;
-  width: 100%;
-  padding: 100px 20px;
+  /* width: 100%; */
+  /* padding: 100px 20px; */
+  /* margin-left: auto; */
+  /* margin-right: auto; */
 `;

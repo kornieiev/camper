@@ -29,7 +29,7 @@ export default function Plug({ title, link }) {
   };
 
   const randomTime = () => {
-    return Math.round(Math.random() * (4000 - 2000) + 2000);
+    return Math.round(Math.random() * (10000 - 3000) + 5000);
   };
 
   setInterval(() => {
