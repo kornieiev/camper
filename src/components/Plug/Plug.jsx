@@ -39,7 +39,7 @@ export default function Plug({ title, link }) {
 
     const randomeValue = Math.floor(Math.random() * 11);
 
-    const newUrl = initialUrl[`${randomeValue}`];
+    let newUrl = initialUrl[`${randomeValue}`];
 
     if (newUrl.includes("undefined")) {
       newUrl = "url(https://ftp.goit.study/img/campers-test-task/9-1.webp)";
