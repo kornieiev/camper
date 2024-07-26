@@ -13,6 +13,7 @@ import { Field, Form, Formik } from "formik";
 import { changeEquipment, changeType } from "../../redux/filters/filtersSlice";
 import { useDispatch } from "react-redux";
 import sprite from "../../assets/sprite.svg";
+import { useEffect } from "react";
 
 export default function Filters() {
   const dispatch = useDispatch();
@@ -21,6 +22,7 @@ export default function Filters() {
     dispatch(changeEquipment(values.equipment));
     dispatch(changeType(values.type));
   };
+
   return (
     <>
       <FilterTitle>Filters</FilterTitle>

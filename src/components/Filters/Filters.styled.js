@@ -35,21 +35,6 @@ export const Group = styled.div`
   width: 360px;
 `;
 
-export const Label = styled.label`
-  border: 1px solid rgba(16, 24, 40, 0.2);
-  border-radius: 10px;
-  padding: 17px 12px;
-  width: 112px;
-  height: 95px;
-  cursor: pointer;
-  position: relative;
-  transition: border-color 0.3s ease;
-
-  &:hover {
-    border-color: ${globalColor.colorRed};
-  }
-`;
-
 export const SvgIcon = styled.svg`
   width: 32px;
   height: 32px;
@@ -90,7 +75,14 @@ export const Input = styled(Field)`
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 2;
 
+  &:checked + ${Span} {
+    outline-color: ${globalColor.colorRed};
+    border-color: ${globalColor.colorRed};
+    stroke: ${globalColor.colorRed};
+    color: ${globalColor.colorRed};
+  }
   &:checked + ${Span} ${SvgIcon} {
     outline-color: ${globalColor.colorRed};
     border-color: ${globalColor.colorRed};
@@ -101,7 +93,19 @@ export const Input = styled(Field)`
     outline-color: ${globalColor.colorRed};
     border-color: ${globalColor.colorRed};
     stroke: ${globalColor.colorRed};
+    fill: ${globalColor.colorRed};
   }
+`;
+
+export const Label = styled.label`
+  border: 1px solid rgba(16, 24, 40, 0.2);
+  border-radius: 10px;
+  padding: 17px 12px;
+  width: 112px;
+  height: 95px;
+  cursor: pointer;
+  position: relative;
+  transition: border-color 0.3s ease;
 `;
 
 export const Button = styled.button`
