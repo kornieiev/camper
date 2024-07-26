@@ -17,7 +17,7 @@ const Favorites = () => {
     likedCampers.includes(camp._id)
   );
 
-  const title = "Add camper to favorite!";
+  const title = "Add camper from catalog to favorite!";
   const link = "/catalog";
 
   return (
