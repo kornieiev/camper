@@ -21,7 +21,7 @@ export const GridItem = styled.div`
   height: 100%;
   background-size: cover;
   background-position: center;
-  transition: ease-in 1500ms;
+  transition: ease-in 800ms;
 `;
 
 export const GridItemAccent = styled.div`
@@ -37,7 +37,7 @@ export const GridItemAccent = styled.div`
   border-radius: 30px;
   :hover {
     color: ${globalColor.colorWhite};
-    transition: ease-in 300ms;
+    transition: ease-in 250ms;
   }
 `;
 
